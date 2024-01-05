@@ -16,7 +16,7 @@ export default function useClima() {
         const key = import.meta.env.VITE_API_KEY;
         
         try {
-            const urlLatLong = `http://api.openweathermap.org/geo/1.0/direct?q=${ciudadState},${pais}&limit=1&appid=${key}`;
+            const urlLatLong = `https://api.openweathermap.org/geo/1.0/direct?q=${ciudadState},${pais}&limit=1&appid=${key}`;
 
             const {data: [datosCiudad]} = await axios(urlLatLong);
             const {lat, lon} = datosCiudad;
